@@ -1,7 +1,7 @@
 package com.qait.automation.gmailTes;
 
 import java.util.concurrent.TimeUnit;
-
+import org.testng.annotations.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
@@ -33,5 +33,9 @@ public class gmailTest {
 	@Test(priority=3)
 	public void thirdCase() {
 		obj.logout();
+	}
+	@AfterClass
+	public void closeUrl() {
+		driver.quit();
 	}
 }
